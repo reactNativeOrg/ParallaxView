@@ -16,6 +16,18 @@ import {
 
 var ParallaxView = require('react-native-parallax-view');
 
+var HEADER = React.createClass({
+render() {
+  return (
+    <View style={styles.header}>
+        <Text style={styles.headerText}>
+          Header
+        </Text>
+    </View>
+  )
+}
+
+})
 
 class ParallaxRN extends Component {
   render() {
@@ -24,12 +36,8 @@ class ParallaxRN extends Component {
       <ParallaxView
         backgroundSource={{ uri: "http://i.imgur.com/mEVXC36.jpg" }}
         windowHeight={300}
-        header={(
-              <Text style={styles.header}>
-                  Header Content
-              </Text>
-          )}
-          scrollableViewStyle={{ backgroundColor: 'red' }}
+        header={<HEADER />}
+        scrollableViewStyle={{ backgroundColor: 'skyblue' }}
       >
       <View>
         <Text style={styles.welcome}>
@@ -90,7 +98,6 @@ class ParallaxRN extends Component {
         </Text>
       </View>
     </ParallaxView>
-
     );
   }
 }
@@ -107,6 +114,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
+  header: {
+     flex: 1,
+     flexDirection: 'column',
+     justifyContent: 'flex-end',
+     paddingHorizontal: 20,
+     paddingVertical: 24
+ },
+ headerText: {
+     fontSize: 24,
+     fontWeight: 'bold',
+     color: '#353535'
+ },
   instructions: {
     textAlign: 'center',
     color: '#333333',
