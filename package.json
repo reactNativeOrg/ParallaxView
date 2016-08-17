@@ -14,5 +14,13 @@
   "devDependencies": {},
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reactNativeOrg/ParallaxView.git"
+  },
+  "bugs": {
+    "url": "https://github.com/reactNativeOrg/ParallaxView/issues"
+  },
+  "homepage": "https://github.com/reactNativeOrg/ParallaxView#readme",
   "description": ""
 }
